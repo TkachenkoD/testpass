@@ -1,25 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
+import {Switch, Route} from 'react-router-dom';
+import MainOne from "./components/MainOne";
+import Details from "./components/Details";
+
+
 import './App.css';
 
 function App() {
   return (
+    <React.Fragment>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      testpass
     </div>
+        <Switch>
+          <Route exact path="/" component={MainOne} />
+          <Route path="/details" component={Details} />
+        </Switch>
+    </React.Fragment>
   );
 }
 
